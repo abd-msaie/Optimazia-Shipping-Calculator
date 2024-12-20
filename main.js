@@ -274,11 +274,7 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
     }
   }
   // Display result with notification
-     if(selectedType === "Sea" || selectedType === "Land")
-    {
-        document.getElementById("result").textContent = " The shipping cost is: $" + cost.toFixed(2);
-    }
- else if (resultMessage) {
+  if (resultMessage) {
     document.getElementById("result").textContent = resultMessage + " The shipping cost is: $" + cost.toFixed(2);
   } else {
     document.getElementById("result").textContent = "The shipping cost is: $" + cost.toFixed(2);
