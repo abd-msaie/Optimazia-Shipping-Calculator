@@ -229,7 +229,6 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
       cost = 6.2087 * finalWeight + 64.293;
     }
   } else if(type==="Sea"){
-      resultMessage = " ";
     if(destination==="BARCELONA")
     {
       if(cpmValue==20)
@@ -255,7 +254,6 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
       else cost=4600;
     }
   }else if(type==="Land"){
-      resultMessage = " ";
     if(destination==="RUH-KSA")
     {
       if(cpmValue==20)
