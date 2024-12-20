@@ -134,7 +134,7 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
     finalWeight = weight;
     resultMessage = "Using provided weight for shipping cost.";
   }
-    
+
   // Automatically set the type to "Cargo" if weight is 120 or more        
   if (finalWeight >= 120 && type !== "Cargo" && type !== "Y") {
     document.getElementById("type").value = "Cargo"; // Change the select value to Cargo
@@ -274,11 +274,11 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
     }
   }
   // Display result with notification
-    if(selectedType === "Sea" || selectedType === "Land")
+     if(selectedType === "Sea" || selectedType === "Land")
     {
         document.getElementById("result").textContent = " The shipping cost is: $" + cost.toFixed(2);
     }
-  else if (resultMessage) {
+ else if (resultMessage) {
     document.getElementById("result").textContent = resultMessage + " The shipping cost is: $" + cost.toFixed(2);
   } else {
     document.getElementById("result").textContent = "The shipping cost is: $" + cost.toFixed(2);
