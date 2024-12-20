@@ -127,6 +127,8 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
   const Y = (length * height * width) / 5000;
 
   // Compare Y with weight, use the greater value for shipping cost calculation
+    if(type !== "Sea" || type !== "Land")
+    {
   if (Y >= weight) {
     finalWeight = Y;
     resultMessage = "Using calculated value dimensional weight for shipping cost.";
@@ -134,7 +136,7 @@ document.getElementById("calculate-btn").addEventListener("click", function() {
     finalWeight = weight;
     resultMessage = "Using provided weight for shipping cost.";
   }
-
+    }
   // Automatically set the type to "Cargo" if weight is 120 or more        
   if (finalWeight >= 120 && type !== "Cargo" && type !== "Y") {
     document.getElementById("type").value = "Cargo"; // Change the select value to Cargo
